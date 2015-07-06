@@ -71,7 +71,7 @@ As mentioned the largest potential flaw found was an unlikely special case where
 
 ## Credits
 
-Credit for the original base formula comes from https://github.com/caskroom/homebrew-unofficial/blob/master/Casks/truecrypt.rb 
+Credit for the base formula comes from https://github.com/caskroom/homebrew-unofficial/blob/1f3022e6706e8ea45b98630c8d077a27d094075c/Casks/truecrypt.rb
 
 
 
