@@ -70,3 +70,7 @@ As mentioned the largest potential flaw found was an unlikely special case where
 Credit for the original base formula comes from https://github.com/caskroom/homebrew-unofficial/blob/master/Casks/truecrypt.rb 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/trinitronx/homebrew-truecrypt/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
