@@ -1,6 +1,6 @@
 # Truecrypt 7.1a Homebrew Tap  [![Build Status](https://travis-ci.org/trinitronx/homebrew-truecrypt.png?branch=master)](https://travis-ci.org/trinitronx/homebrew-truecrypt)
 
-This tap is designed specifically for installing the last available working & audited build of Truecrypt, version: 7.1a
+This tap is designed specifically for installing the last available working & [audited][5] build of Truecrypt, version: 7.1a
 
 ## Installation
 
