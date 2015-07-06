@@ -2,13 +2,14 @@ language: objective-c
 osx_image: xcode61
 before_install:
   - brew update
+  - brew install caskroom/cask/brew-cask
 install:
   - mkdir -p $(brew --repo)/Library/Taps/trinitronx
   - ln -s $PWD $(brew --repo)/Library/Taps/trinitronx/homebrew-truecrypt
   - brew tap --repair
   - brew tap
 script:
-  - brew audit truecrypt
+  - brew cask audit truecrypt
   - brew cask install -v truecrypt
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text --create  --encryption=AES --hash=SHA-512 --filesystem=FAT -k '' --password=test123 --size=500000 --random-source=/dev/urandom --volume-type=normal /tmp/testvolume.tc
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text -k '' --password=test123 --protect-hidden=no --mount /tmp/testvolume.tc /Volumes/testvolume
