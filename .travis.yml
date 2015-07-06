@@ -3,7 +3,7 @@ osx_image: xcode61
 before_install:
   - brew update
 install:
-  - mkdir -p $(brew --repo)/Library/Taps/homebrew
+  - mkdir -p $(brew --repo)/Library/Taps/trinitronx
   - ln -s $PWD $(brew --repo)/Library/Taps/trinitronx/homebrew-truecrypt/
   - brew tap --repair
   - brew tap
