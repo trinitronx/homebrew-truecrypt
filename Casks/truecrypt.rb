@@ -33,11 +33,13 @@ cask :v1 => 'truecrypt' do
     -</installer-script>
     \ No newline at end of file
     +</installer-script>
+    
     EOPATCH
 
     patch_file_path = File.join( staged_path, 'TrueCrypt7.1a_Installer_Yosemite_Fix.patch')
     File.open( patch_file_path, 'w' ) do |patch_file|
       patch_file.write( truecrypt_installer_yosemite_patch )
+      patch_file.close
     end
 
     system_command '/bin/sh',
