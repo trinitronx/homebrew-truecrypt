@@ -1,0 +1,19 @@
+language: objective-c
+osx_image: xcode61
+before_install:
+  - brew update
+install:
+  - mkdir -p $(brew --repo)/Library/Taps/homebrew
+  - ln -s $PWD $(brew --repo)/Library/Taps/homebrew/homebrew-truecrypt
+  - brew tap --repair
+  - brew tap
+script:
+  - brew audit truecrypt
+  - brew install -v truecrypt
+  - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text --create  --encryption=AES --hash=SHA-512 --filesystem=FAT -k '' --password=test123 --size=500000 --random-source=/dev/urandom --volume-type=normal /tmp/testvolume.tc
+  - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text -k '' --password=test123 --protect-hidden=no --mount /tmp/testvolume.tc /Volumes/testvolume
+  - [ -e '/Volumes/testvolume/' ]
+  - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text --dismount /tmp/testvolume.tc /Volumes/testvolume
+  - rm /tmp/testvolume.tc
+matrix:
+  fast_finish: true
