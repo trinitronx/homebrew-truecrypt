@@ -4,6 +4,10 @@ This tap is designed specifically for installing the last available working & [a
 
 ## Installation
 
+First, make sure you have installed [`homebrew-cask`](http://caskroom.io/) if you haven't yet:
+
+    brew install caskroom/cask/brew-cask
+
 Then, run the following in your command-line:
 
     brew tap trinitronx/homebrew-truecrypt
@@ -12,11 +16,11 @@ Then, run the following in your command-line:
 
 **Note**: For info run:
 
-    brew info truecrypt
+    brew cask info truecrypt
 
 Once the tap is installed, you can install `truecrypt`!
 
-    brew install truecrypt
+    brew cask install truecrypt
 
 ## Testing
 
