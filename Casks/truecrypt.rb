@@ -15,8 +15,8 @@ cask :v1 => 'truecrypt' do
     # Reference:
     #   http://tips.tinyiron.net/yosemite-to-truecrypt-never-gonna-get-it/
     truecrypt_installer_yosemite_patch = <<-EOPATCH.undent
-    --- /Volumes/TrueCrypt 7.1a/TrueCrypt 7.1a.mpkg/Contents/distribution.dist  2012-02-07 02:42:11.000000000 -0700
-    +++ /Volumes/TrueCrypt 7.1a-fix/TrueCrypt 7.1a.mpkg/Contents/distribution.dist  2015-07-05 20:52:27.000000000 -0600
+    --- a/TrueCrypt 7.1a.mpkg/Contents/distribution.dist\t2012-02-07 02:42:11.000000000 -0700
+    +++ b/TrueCrypt 7.1a.mpkg/Contents/distribution.dist\t2015-07-05 20:54:56.000000000 -0600
     @@ -10,7 +10,7 @@
      
      
@@ -31,9 +31,8 @@ cask :v1 => 'truecrypt' do
          <pkg-ref id="com.google.macfuse.core" installKBytes="60" version="2.3.8.10.6" auth="Root">file:./Contents/Packages/OSXFUSEMacFUSE.pkg</pkg-ref>
          <pkg-ref id="com.google.macfuse" installKBytes="652" version="2.0" auth="Root">file:./Contents/Packages/MacFUSE.pkg</pkg-ref>
     -</installer-script>
-    \ No newline at end of file
+    \\ No newline at end of file
     +</installer-script>
-    
     EOPATCH
 
     patch_file_path = File.join( staged_path, 'TrueCrypt7.1a_Installer_Yosemite_Fix.patch')
@@ -43,7 +42,7 @@ cask :v1 => 'truecrypt' do
     end
 
     system_command '/bin/sh',
-      :args => [ '-c', "cd #{staged_path} && patch -p3 < #{patch_file_path}"]
+      :args => [ '-c', "cd #{staged_path} && patch -p1 < #{patch_file_path}"]
   end
 
   pkg "TrueCrypt #{version}.mpkg"
