@@ -1,4 +1,4 @@
-# Truecrypt 7.1a Homebrew Tap  [![Build Status](https://travis-ci.org/trinitronx/homebrew-truecrypt.png?branch=master)](https://travis-ci.org/trinitronx/homebrew-truecrypt)
+# Truecrypt 7.1a Homebrew Tap  [![Build Status](https://travis-ci.org/trinitronx/homebrew-truecrypt.png?branch=master)](https://travis-ci.org/trinitronx/homebrew-truecrypt) [![Gratipay](http://img.shields.io/gratipay/trinitronx.svg)](https://www.gratipay.com/trinitronx)
 
 This tap is designed specifically for installing the last available working & [audited][5] build of Truecrypt, version: 7.1a
 
