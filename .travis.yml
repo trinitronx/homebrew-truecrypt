@@ -13,8 +13,7 @@ script:
   - brew cask install -v truecrypt
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text --create  --encryption=AES --hash=SHA-512 --filesystem=FAT -k '' --password=test123 --size=500000 --random-source=/dev/urandom --volume-type=normal /tmp/testvolume.tc
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text -k '' --password=test123 --protect-hidden=no --mount /tmp/testvolume.tc /Volumes/testvolume
-  - ls -l /Volumes/
-  - /bin/sh -c "[ -e '/Volumes/testvolume/' ]"
+  - /bin/sh -c "[ -e '/Volumes/testvolume' ]"
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text --dismount /tmp/testvolume.tc /Volumes/testvolume
   - rm /tmp/testvolume.tc
 matrix:
