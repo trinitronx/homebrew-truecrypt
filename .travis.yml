@@ -10,7 +10,7 @@ install:
   - brew tap
 script:
   - brew cask audit truecrypt
-  - brew cask install -v truecrypt
+  - brew cask install --verbose truecrypt
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text --create  --encryption=AES --hash=SHA-512 --filesystem=FAT -k '' --password=test123 --size=500000 --random-source=/dev/urandom --volume-type=normal /tmp/testvolume.tc
   - /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt --text -k '' --password=test123 --protect-hidden=no --mount /tmp/testvolume.tc /Volumes/testvolume
   - /bin/sh -c "[ -e '/Volumes/testvolume' ]"
