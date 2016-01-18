@@ -2,6 +2,7 @@ cask 'truecrypt' do
   version '7.1a'
   sha256 '04db58b737c05bb6b0b83f1cb37a29edec844b59ff223b9e213ee1f4e287f586'
 
+  name 'truecrypt'
   url "https://github.com/DrWhax/truecrypt-archive/raw/master/TrueCrypt%20#{version}%20Mac%20OS%20X.dmg"
   # mirror "https://www.grc.com/misc/truecrypt/TrueCrypt%20#{version}%20Mac%20OS%20X.dmg"
   gpg "#{url}.sig",
