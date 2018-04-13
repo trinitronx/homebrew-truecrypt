@@ -9,13 +9,13 @@ cask 'truecrypt' do
       :key_id => 'c5f4bac4a7b22db8b8f85538e3ba73caf0d6b1e0'
 
   homepage 'https://www.grc.com/misc/truecrypt/truecrypt.htm'
-  license :oss
+  #license :oss
 
   preflight do
     # Due to an incorrect version check in TrueCrypt's installer, we need to patch it to install on OS X > 10.10
     # Reference:
     #   http://tips.tinyiron.net/yosemite-to-truecrypt-never-gonna-get-it/
-    truecrypt_installer_yosemite_patch = <<-EOPATCH.undent
+    truecrypt_installer_yosemite_patch = <<~EOPATCH
     --- a/TrueCrypt 7.1a.mpkg/Contents/distribution.dist\t2012-02-07 02:42:11.000000000 -0700
     +++ b/TrueCrypt 7.1a.mpkg/Contents/distribution.dist\t2015-07-05 20:54:56.000000000 -0600
     @@ -10,7 +10,7 @@
@@ -53,7 +53,7 @@ cask 'truecrypt' do
   caveats do
     files_in_usr_local
     discontinued
-    <<-EOS.undent
+    <<~EOS
     Phase 2 of the TrueCrypt Audit FINISHED!
     No significant cryptographic problems found
     Yes ... TrueCrypt is still safe to use.
