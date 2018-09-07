@@ -5,8 +5,8 @@ cask 'truecrypt' do
   name 'truecrypt'
   url "https://github.com/DrWhax/truecrypt-archive/raw/master/TrueCrypt%20#{version}%20Mac%20OS%20X.dmg"
   # mirror "https://www.grc.com/misc/truecrypt/TrueCrypt%20#{version}%20Mac%20OS%20X.dmg"
-  gpg "#{url}.sig",
-      :key_id => 'c5f4bac4a7b22db8b8f85538e3ba73caf0d6b1e0'
+  #gpg "#{url}.sig",
+  #    :key_id => 'c5f4bac4a7b22db8b8f85538e3ba73caf0d6b1e0'
 
   homepage 'https://www.grc.com/misc/truecrypt/truecrypt.htm'
   #license :oss
