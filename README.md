@@ -2,6 +2,10 @@
 
 This tap is designed specifically for installing the last available working & [audited][5] build of Truecrypt, version: 7.1a
 
+**NOTE:** As of macOS Catalina (10.15), 32-bit apps are no longer supported.  Therefore, Truecrypt has been obsoleted.  Please migrate to [VeraCrypt](https://www.veracrypt.fr/en/Home.html) which supports 64-bit. VeraCrypt is based on TrueCrypt 7.1a and is currently maintained.
+
+To install VeraCrypt, the Truecrypt replacement: `brew cask install veracrypt`
+
 ## Installation
 
 First, make sure you have installed [`homebrew-cask`](http://caskroom.io/) if you haven't yet:
